@@ -475,8 +475,7 @@ footer {
     text-align: right;
 }
 
-.grid-item img,
-.grid-item video {
+.grid-item img {
     width: 100%;
     box-shadow: 10px 10px 0px 0px black;
 }
@@ -940,8 +939,7 @@ footer a {
         margin: auto auto 5rem auto;
     }
 
-    .grid-item img,
-    .grid-item video {
+    .grid-item img {
         width: 100%;
         box-shadow: 15px 15px 0px 0px black;
     }
