@@ -101,8 +101,12 @@ header li {
     top: 0;
     left: 0;
     transform: translate(-0%, 0%);
-    animation: flip 3.5s linear infinite;
+   
     padding-top: 1px;
+}
+
+.canvas-logo:hover {
+    animation: flip 3.5s linear infinite;
 }
 
 .menu-wrapper {
@@ -197,13 +201,29 @@ footer {
 }
 
 /* Home Styles */
-
-.home-section {
-    height: 100vh;
-    background-color: black;
+.content__name h1 {
+    position: absolute;
+    color: white;
+    font-size: clamp(2.7rem, 13vw, 7rem);
+    font-weight: 900;
+    padding: 5rem 0 0 2rem;
+    text-transform: uppercase;
 }
 
-.scroll-container {
+.content__name img {
+    display: none;
+} 
+
+.home-section {
+    background-color: #000;
+}
+
+.home-section__content {
+    overflow: hidden;
+    height: clamp(10px, 173vw, 984px);
+}
+
+/* .scroll-container {
     width: 280vw;
     overflow: hidden;
     display: flex;
@@ -212,8 +232,7 @@ footer {
     position: relative;
     top: 42%;
     right: 88.5%;
-
-}
+} */
 
 .scroll-container-about {
     white-space: nowrap;
@@ -222,6 +241,95 @@ footer {
     display: flex;
 }
 
+
+/* WEB-developer illustration */
+.content__illustartion {
+    margin-top: 9rem;
+    position: relative;
+    height: clamp(10px, 150vw, 1000px);
+}
+  
+.content__illustartion img:first-child,
+.content__illustartion img:nth-child(2),
+.content__illustartion img:nth-child(3),
+.content__illustartion img:nth-child(4),
+.content__illustartion img:nth-child(5),
+.content__illustartion img:nth-child(6) {
+    position: absolute;
+    width: 103.3%;
+    right: 1%;
+    top: 35%;
+}
+  
+.content__illustartion img:first-child {
+    top: 20%;
+}
+
+.content__illustartion img:last-child {
+    top: 4%;
+    animation: text-developer-scaling 2s linear infinite;
+}
+
+/* set of animations for web-developer section */
+
+@keyframes text-developer-scaling {
+
+    0%,
+    100% {
+        width: 70%;
+    }
+
+    70% {
+        width: 60%;
+    }
+}
+  
+  @keyframes text-developer-scaling {
+  
+      0%,
+      100% {
+        transform: scale(0.9);
+      }
+  
+      90% {
+        transform: scale(0.95);
+      }
+  }
+  
+  .content__illustartion img:nth-child(2) {
+      animation: belt-rotation 5s linear infinite;
+  }
+  
+  @keyframes belt-rotation {
+  
+      0%,
+      100% {
+          transform: rotate(0deg);
+      }
+  
+      50% {
+          transform: rotate(-4deg);
+      }
+  }
+  
+  .content__illustartion img:nth-child(3),
+  .content__illustartion img:nth-child(4) {
+      animation: hair-rotation 3s linear infinite;
+  }
+  
+  @keyframes hair-rotation {
+  
+      0%,
+      100% {
+          transform: rotate(0deg);
+      }
+  
+      50% {
+          transform: rotate(2deg);
+      }
+  }
+  
+  
 /* creating running text */
 
 @keyframes animate-text {
@@ -341,120 +449,6 @@ footer {
     }
 }
 
-.web-developer {
-    background-color: black;
-    position: relative;
-    height: clamp(10px, 140vw, 1000px);
-    overflow: hidden;
-}
-
-.web-developer img:first-child {
-    position: absolute;
-    width: 100%;
-    right: 1.5%;
-    top: 5%;
-}
-
-.web-developer img:nth-child(2),
-.web-developer img:nth-child(3),
-.web-developer img:nth-child(4),
-.web-developer img:nth-child(5),
-.web-developer img:nth-child(6),
-.web-developer img:nth-child(7),
-.web-developer img:nth-child(8),
-.web-developer img:nth-child(9),
-.web-developer img:nth-child(10) {
-    position: absolute;
-    width: 103.3%;
-    right: 1%;
-    top: 5%;
-}
-
-.web-developer img:nth-child(10) {
-    right: 8%;
-    top: 4%;
-    animation: text-developer-scaling 5s linear infinite;
-}
-
-/* set of animations for web-developer section */
-
-@keyframes text-developer-scaling {
-
-    0%,
-    100% {
-        width: 100%;
-    }
-
-    70% {
-        width: 90%;
-    }
-}
-
-.web-developer img:nth-child(3) {
-    animation: belt-rotation 5s linear infinite;
-}
-
-@keyframes belt-rotation {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-4deg);
-    }
-}
-
-.web-developer img:nth-child(4),
-.web-developer img:nth-child(5) {
-    animation: hair-rotation 2s linear infinite;
-}
-
-@keyframes hair-rotation {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(4deg);
-    }
-}
-
-.web-developer img:nth-child(7) {
-    animation: forelock-left-rotation 3s linear infinite;
-}
-
-@keyframes forelock-left-rotation {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(1deg);
-    }
-}
-
-.web-developer img:nth-child(8) {
-    animation: forelock-right-rotation 2s linear infinite;
-}
-
-@keyframes forelock-right-rotation {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-1deg);
-    }
-}
-
 
 /* Work section */
 
@@ -530,31 +524,23 @@ footer a {
 
 @media screen and (min-width: 677px) and (max-width: 900px) {
 
-    .web-developer {
-        height: clamp(510px, 110vw, 1000px);
-    }
+    /* Home Styles */
 
-    .web-developer img:first-child {
-        width: 70%;
-        right: 13.5%;
+    /* WEB-developer illustration */
+    .content__illustartion {
+        height: clamp(510px, 120vw, 800px);
+        margin-top: 13rem;
     }
-
-    .web-developer img:nth-child(2),
-    .web-developer img:nth-child(3),
-    .web-developer img:nth-child(4),
-    .web-developer img:nth-child(5),
-    .web-developer img:nth-child(6),
-    .web-developer img:nth-child(7),
-    .web-developer img:nth-child(8),
-    .web-developer img:nth-child(9),
-    .web-developer img:nth-child(10) {
-        width: 75%;
-        right: 15%;
-    }
-
-    .web-developer img:nth-child(10) {
-        top: -5%;
+    
+    .content__illustartion img:first-child,
+    .content__illustartion img:nth-child(2),
+    .content__illustartion img:nth-child(3),
+    .content__illustartion img:nth-child(4),
+    .content__illustartion img:nth-child(5),
+    .content__illustartion img:nth-child(6){
+        width: 85%;
         right: 10%;
+        left: unset;
     }
 
 }
@@ -816,6 +802,73 @@ footer a {
     /* ------------------------------  START OF INDEX.HTML WEB PAGE  -------------------------------- */
 
 
+    /* Home Styles */
+
+    .content__name h1 {
+        font-size: clamp(6rem, 9vw, 9rem);
+        padding-top: clamp(18rem, 45vh, 48rem);
+        padding-left: clamp(2rem, 5vw, 5rem);
+        width: 800px;
+        z-index: 11;
+        height: 100vh;
+        min-height: 1000px;
+    }
+    
+    .content__name>img {
+        display: block;
+        position: absolute;
+        top: 31%;
+        left: 13%;
+        z-index: 12;
+        transform: rotate(0);
+        transform-origin: 50% 50%;
+        animation: transformOriginAnimation 7s infinite alternate;
+      }
+      
+      @keyframes transformOriginAnimation {
+        0% {
+          transform: rotate(0);
+        }
+        50% {
+          transform: rotate(-50deg);
+        }
+    
+      }
+
+    /* WEB-developer illustration */
+    .home-section__content {
+        height: 100vh;
+        min-height: 700px;
+    }
+
+    .content__illustartion {
+        margin-top: unset;
+    }
+
+    .content__illustartion img:first-child,
+    .content__illustartion img:nth-child(2),
+    .content__illustartion img:nth-child(3),
+    .content__illustartion img:nth-child(4),
+    .content__illustartion img:nth-child(5),
+    .content__illustartion img:nth-child(6) {
+        width: unset;
+        height: 75vh;
+        right: 4%;
+        top: 10%;
+    }
+
+    .content__illustartion img:first-child {
+        left: unset; 
+        top: 6%;
+    }
+
+    .content__illustartion img:last-child {
+        top: -5%;
+        height: 75vh;
+        right: 2%;
+    }
+
+
     /* About desktop section */
 
     .about-section {
@@ -847,15 +900,6 @@ footer a {
         width: unset;
     }
 
-    .container-web-developer {
-        display: flex;
-        padding-bottom: 5rem;
-    }
-
-    .container-web-developer>p {
-        flex-basis: 50%;
-        align-self: center;
-    }
 
     .eyes {
         height: clamp(210px, 22vw, 800px);
@@ -873,63 +917,7 @@ footer a {
         right: 17%;
     }
 
-    .web-developer {
-        height: clamp(400px, 25vw, 1350px);
-        flex-basis: 50%;
-    }
-
-    .web-developer img:first-child {
-        width: unset;
-        height: 100%;
-        transform: rotate(-89deg);
-        right: 11.5%;
-        top: 13%;
-    }
-
-    .web-developer img:nth-child(2) {
-        height: 110%;
-        right: 23%;
-        top: -3%;
-    }
-
-    .web-developer img:nth-child(9) {
-        bottom: -2.5%;
-    }
-
-    .web-developer img:nth-child(2),
-    .web-developer img:nth-child(3),
-    .web-developer img:nth-child(4),
-    .web-developer img:nth-child(5),
-    .web-developer img:nth-child(6),
-    .web-developer img:nth-child(7),
-    .web-developer img:nth-child(8),
-    .web-developer img:nth-child(9),
-    .web-developer img:nth-child(10) {
-        width: unset;
-        height: 120%;
-        right: 10%;
-        top: unset;
-    }
-
-    .web-developer img:nth-child(10) {
-        height: unset;
-        right: 15%;
-        top: -8%;
-        animation: text-developer-scaling 4s linear infinite;
-    }
-
-    @keyframes text-developer-scaling {
-
-        0%,
-        100% {
-            width: 70%;
-        }
-
-        70% {
-            width: 60%;
-        }
-    }
-
+ 
 
     /* Work desktop section */
 
@@ -1006,6 +994,40 @@ footer a {
 
     /* ------------------------------  START OF INDEX.HTML WEB PAGE -------------------------------- */
 
+
+    /* Home Styles */
+    .home-section__content {
+        display: flex;
+        align-items: center;
+        max-width: 1700px;
+        min-height: 1190px;
+        margin: auto;
+    }
+
+    .content__name h1 {
+        flex-basis: 50%;
+        position: relative;
+        height: auto;
+        font-size: 8rem;
+    }
+
+    /* WEB-developer illustration */
+    .content__illustartion {
+        flex-basis: 50%;
+        height: clamp(1200px,25vw, 1350px);
+    }
+
+    .content__illustartioneb img:first-child,
+    .content__illustartion img:nth-child(2),
+    .content__illustartion img:nth-child(3),
+    .content__illustartion img:nth-child(4),
+    .content__illustartion img:nth-child(5),
+    .content__illustartion img:nth-child(6) {
+        right: clamp(0vw, 4vw, 30vw);
+    }
+
+
+
     /* About desktop section */
 
     .about-section {
@@ -1013,21 +1035,6 @@ footer a {
         padding-left: 10vw;
     }
 
-    .web-developer img:first-child {
-        right: 21.5%;
-    }
-
-    .web-developer img:nth-child(2),
-    .web-developer img:nth-child(3),
-    .web-developer img:nth-child(4),
-    .web-developer img:nth-child(5),
-    .web-developer img:nth-child(6),
-    .web-developer img:nth-child(7),
-    .web-developer img:nth-child(8),
-    .web-developer img:nth-child(9),
-    .web-developer img:nth-child(10) {
-        right: 20%;
-    }
 
     /* Work desktop section */
 
