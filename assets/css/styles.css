@@ -58,7 +58,9 @@ a:before,
 a:hover:before,
 a:focus:before,
 .hbg-wrapper a:hover:before,
-.hbg-wrapper a:focus:before {
+.hbg-wrapper a:focus:before,
+.work-grid-section a:hover::before,
+.work-grid-section a:focus::before {
     top: -3%;
     height: 100%;
 }
@@ -478,6 +480,12 @@ footer {
     font-size: unset;
 }
 
+.work-grid-section a:before {
+    top: -1px;
+    height: 3px;
+}
+
+
 .delighted-container {
     transform: rotate(-90deg);
     width: 200vw;
@@ -494,6 +502,7 @@ footer {
 
 .delighted-container>div {
     background-color: black;
+    height: clamp(40px, 4vw, 60px);
 }
 
 
