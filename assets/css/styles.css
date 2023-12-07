@@ -30,7 +30,12 @@ ul {
     display: flex;
     flex-direction: row-reverse;
     list-style: none;
-    padding-top: 2.5px;
+}
+
+li {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 a {
@@ -200,6 +205,13 @@ footer {
     color: black;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+header a,
+footer a {
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
 }
 
 /* Home Styles */
@@ -513,8 +525,9 @@ footer ul {
     font-size: clamp(16px, 4vw, 50px);
     justify-content: space-around;
     margin-left: 39px;
-    align-self: center;
     width: 100%;
+    height: -webkit-fill-available;
+    align-items: center;
 }
 
 footer a {
