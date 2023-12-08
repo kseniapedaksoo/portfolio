@@ -1039,7 +1039,7 @@ footer a {
         height: clamp(1200px,25vw, 1350px);
     }
 
-    .content__illustartioneb img:first-child,
+    .content__illustartion img:first-child,
     .content__illustartion img:nth-child(2),
     .content__illustartion img:nth-child(3),
     .content__illustartion img:nth-child(4),
