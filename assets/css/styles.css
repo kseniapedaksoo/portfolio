@@ -368,6 +368,7 @@ footer a {
     background-color: black;
     padding: 0 clamp(10px, 4vw, 30px);
     font-size: clamp(17px, 2vw, 50px);
+    margin-bottom: clamp(-39px, 4vw, -60px);
 }
 
 .about-section p {
